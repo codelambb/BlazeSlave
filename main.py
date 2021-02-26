@@ -86,8 +86,8 @@ async def donate(ctx, timer=None, winners=None, requirements=None,*, prize=None)
 	await log.send(f"{ctx.author} has made a GIVEAWAY donation request with arguemtents below-:\n\nTimer: {timer}\nWinners: {winners}\nRequriement: {requirements}\nPrize: {prize}")
 
 	await ctx.send("Successfully sent your giveaway request! Please wait for any online staff to review it! We will notify you when we will be done.")
-	x = client.get_channel(808929255526367252)
-	await x.send("<@&806507393772027904>")
+    x = client.get_channel(808929255526367252)
+    await x.send("<@&806507393772027904>")
 
 #event command
 @client.command()
@@ -368,7 +368,7 @@ async def leaderboard(ctx, x = 3):
 #help command
 @client.command()
 async def help(ctx):
-    embed = discord.Embed(title="Help Menu\n\n", description="`.donate (time) (winners) (requirement) (prize)`: Sends a donation request to the donations channel\n\n`.event`: Send a event request to the event-donations channel!\n\n`.invites (user)`: See the number of members invited by the user\n\n`.leaderboard (amount)`: See the leaderboard of the most xp earned by people\n\n`level (user)` See the specified user's levelling profile\n\n`levelsettings (mode)`: Change the mode of the levelling system to either on / off\n\n`ping`: See the client's latency\n\n`revoke`: Revoke all the invites from the server using this command\n\n", color=ctx.author.color)
+    embed = discord.Embed(title="Help Menu\n\n", description="`.donate (time) (winners) (requirement) (prize)`: Sends a donation request to the donations channel\n\n`.event`: Send a event request to the event-donations channel!\n\n`.invites (user)`: See the number of members invited by the user\n\n`.leaderboard (amount)`: See the leaderboard of the most xp earned by people\n\n`level (user)` See the specified user's levelling profile\n\n`levelsettings (mode)`: Change the mode of the levelling system to either on / off\n\n`ping`: See the client's latency\n\n`revoke`: Revoke all the invites from the server using this command\n\n`.vouch (user)`: Vouch for a user!\n\n`.vouches (user)`: See how many vouches does that user have!\n\n", color=ctx.author.color)
     await ctx.send(embed=embed)
 
 #open_vouch funtion
